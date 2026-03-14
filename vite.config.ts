@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: true,
     port: 8080,
     allowedHosts: [
-      "gopal-yadav-portfolio-3.onrender.com"
+      "gopal-yadav-portfolio-4.onrender.com"
     ],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
