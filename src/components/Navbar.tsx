@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,13 +13,9 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [dark, setDark] = useState(true);
+  const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-  }, [dark]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -49,22 +46,22 @@ const Navbar = () => {
             </a>
           ))}
           <button
-            onClick={() => setDark(!dark)}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-full bg-muted hover:bg-primary/10 transition-colors"
             aria-label="Toggle theme"
           >
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </div>
 
         {/* Mobile toggle */}
         <div className="flex md:hidden items-center gap-2">
           <button
-            onClick={() => setDark(!dark)}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-full bg-muted"
             aria-label="Toggle theme"
           >
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2">
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Code, Smartphone, Server, Calendar, MapPin, BookOpen, Trophy } from "lucide-react";
+import { GraduationCap, Code, Smartphone, Server, Calendar, MapPin, Trophy } from "lucide-react";
 
 const highlights = [
   { icon: Smartphone, label: "Mobile Dev", desc: "Flutter Expert" },

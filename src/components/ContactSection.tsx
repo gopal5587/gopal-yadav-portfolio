@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, Github, Send, MapPin, Sparkles } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Send, Sparkles } from "lucide-react";
 
 const contactLinks = [
   { icon: Mail, label: "5587gopalyadav@gmail.com", href: "mailto:5587gopalyadav@gmail.com", color: "from-primary to-secondary" },
