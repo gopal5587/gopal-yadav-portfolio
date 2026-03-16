@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Lightbulb, Smartphone, Database, Code2 } from "lucide-react";
 
 const specialties = [
-  { icon: Code2, label: "Web design", color: "hsl(var(--primary))" },
+  { icon: Code2, label: "Flutter", color: "hsl(var(--primary))" },
   { icon: Lightbulb, label: "Java", color: "hsl(0, 75%, 55%)" },
   { icon: Database, label: "AI/ML", color: "hsl(40, 90%, 55%)" },
   { icon: Smartphone, label: "Application", color: "hsl(var(--secondary))" },
