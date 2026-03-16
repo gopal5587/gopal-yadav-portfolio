@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Smartphone, Database, Code2 } from "lucide-react";
+import { Lightbulb, Smartphone, Database } from "lucide-react";
+
+const FlutterLogo = ({ size = 32, className = "" }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 256 317" className={className}>
+    <defs>
+      <linearGradient id="flutter-grad" x1="4.86%" x2="90.14%" y1="93.07%" y2="6.93%">
+        <stop offset="0%" stopColor="#1A237E" stopOpacity="0.4" />
+        <stop offset="100%" stopColor="#1A237E" stopOpacity="0" />
+      </linearGradient>
+    </defs>
+    <polygon fill="#47C5FB" points="157.665 0.001 0 157.666 48.8 206.466 255.265 0.001" />
+    <polygon fill="#47C5FB" points="156.567 145.396 72.2 229.762 120.999 278.563 169.8 229.762 255.166 145.396" />
+    <polygon fill="#00569E" points="120.999 278.563 169.8 229.762 255.166 316.129 206.366 316.129" />
+    <polygon fill="url(#flutter-grad)" points="120.999 278.563 161.232 264.948 169.8 229.762" />
+  </svg>
+);
 
 const specialties = [
-  { icon: Code2, label: "Flutter", color: "hsl(var(--primary))" },
+  { icon: FlutterLogo, label: "Flutter", color: "hsl(var(--primary))" },
   { icon: Lightbulb, label: "Java", color: "hsl(0, 75%, 55%)" },
   { icon: Database, label: "AI/ML", color: "hsl(40, 90%, 55%)" },
   { icon: Smartphone, label: "Application", color: "hsl(var(--secondary))" },
