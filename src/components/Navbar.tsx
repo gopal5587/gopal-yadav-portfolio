@@ -87,7 +87,7 @@ const Navbar = () => {
       )}
 
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-[280px] z-50 flex-col items-center bg-card border-r border-border overflow-y-auto">
+      <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-[280px] z-50 flex-col items-center bg-card border-r border-border overflow-y-auto">
         {/* Profile section */}
         <div className="flex flex-col items-center pt-10 pb-6 px-6 w-full">
           <motion.div
