@@ -11,13 +11,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ServicesSection />
-      <ContactSection />
-      <Footer />
+      {/* Offset main content for sidebar on desktop */}
+      <main className="lg:ml-[280px]">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ServicesSection />
+        <ContactSection />
+        <Footer />
+      </main>
     </div>
   );
 };
