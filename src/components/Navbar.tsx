@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <>
       {/* Mobile top bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 lg:hidden glass-card shadow-card px-4 py-3 flex items-center justify-between">
+      <div className="fixed top-0 left-0 right-0 z-50 md:hidden glass-card shadow-card px-4 py-3 flex items-center justify-between">
         <a href="#home" className="font-display text-lg font-bold gradient-text">
           Gopal.
         </a>
