@@ -12,7 +12,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       {/* Offset main content for sidebar on desktop */}
-      <main className="lg:ml-[280px]">
+      <main className="md:ml-[280px]">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

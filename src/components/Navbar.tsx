@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <>
       {/* Mobile top bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 lg:hidden glass-card shadow-card px-4 py-3 flex items-center justify-between">
+      <div className="fixed top-0 left-0 right-0 z-50 md:hidden glass-card shadow-card px-4 py-3 flex items-center justify-between">
         <a href="#home" className="font-display text-lg font-bold gradient-text">
           Gopal.
         </a>
@@ -67,7 +67,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed top-14 left-0 right-0 z-40 lg:hidden glass-card shadow-card border-t border-border p-4 flex flex-col gap-3"
+          className="fixed top-14 left-0 right-0 z-40 md:hidden glass-card shadow-card border-t border-border p-4 flex flex-col gap-3"
         >
           {navLinks.map((l) => (
             <a
@@ -87,7 +87,7 @@ const Navbar = () => {
       )}
 
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-[280px] z-50 flex-col items-center bg-card border-r border-border overflow-y-auto">
+      <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-[280px] z-50 flex-col items-center bg-card border-r border-border overflow-y-auto">
         {/* Profile section */}
         <div className="flex flex-col items-center pt-10 pb-6 px-6 w-full">
           <motion.div
