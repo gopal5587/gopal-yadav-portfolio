@@ -67,7 +67,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed top-14 left-0 right-0 z-40 lg:hidden glass-card shadow-card border-t border-border p-4 flex flex-col gap-3"
+          className="fixed top-14 left-0 right-0 z-40 md:hidden glass-card shadow-card border-t border-border p-4 flex flex-col gap-3"
         >
           {navLinks.map((l) => (
             <a
