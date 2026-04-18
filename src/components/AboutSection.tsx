@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Smartphone, Database } from "lucide-react";
+import { Lightbulb, Smartphone, Database, GraduationCap, Trophy, Github } from "lucide-react";
 
 const FlutterLogo = ({ size = 32, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 256 317" className={className}>
@@ -51,12 +51,47 @@ const AboutSection = () => (
         className="max-w-4xl mb-16"
       >
         <p className="text-muted-foreground leading-[1.9] text-base">
-          <span className="font-semibold text-foreground">Hi I'm Gopal Yadav</span>{" "}
-          a passionate and motivated Computer Science student with a keen interest in software development and
-          technology innovation. Currently pursuing my Bachelor's degree in Computer Science at IIIT Sonepat, Haryana. I have been immersing
-          myself in various programming languages like Java, Dart, and C++. My coursework has provided me with a strong foundation in
-          algorithms, data structures, and object-oriented design, and I'm eager to apply these skills to real-world challenges.
+          <span className="font-semibold text-foreground">Hi, I'm Gopal Yadav,</span>{" "}
+          a 3rd-year Computer Science student at IIIT Sonepat. I specialize in competitive problem-solving and
+          building scalable, cross-platform applications. Leveraging a strong foundation in algorithms and full-stack
+          development, I focus on turning complex technical challenges into high-quality, intuitive digital solutions
+          that deliver real-world impact.
         </p>
+      </motion.div>
+
+      {/* Stats cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.225 }}
+        className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6"
+      >
+        {[
+          { icon: GraduationCap, value: "8.68", label: "GPA", color: "hsl(var(--primary))" },
+          { icon: Trophy, value: "6+", label: "Hackathons", color: "hsl(40, 90%, 55%)" },
+          { icon: Github, value: "8+", label: "GitHub Projects", color: "hsl(var(--secondary))" },
+        ].map(({ icon: Icon, value, label, color }, i) => (
+          <motion.div
+            key={label}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.225 + i * 0.1 }}
+            whileHover={{ y: -4 }}
+            className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all relative overflow-hidden group"
+          >
+            <Icon size={28} style={{ color }} strokeWidth={1.5} className="mb-3" />
+            <p className="font-display text-3xl font-bold text-foreground leading-none mb-1" style={{ color }}>
+              {value}
+            </p>
+            <p className="text-muted-foreground text-xs font-mono tracking-[0.2em] uppercase">{label}</p>
+            <div
+              className="absolute bottom-0 left-0 right-0 h-1 transition-all group-hover:h-1.5"
+              style={{ backgroundColor: color }}
+            />
+          </motion.div>
+        ))}
       </motion.div>
 
       {/* Specialty cards */}
