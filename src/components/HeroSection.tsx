@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FileDown, ChevronDown } from "lucide-react";
+import { FileText, ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const roles = ["Flutter Developer", "Backend Developer", "CSE Student"];
@@ -83,11 +83,13 @@ const HeroSection = () => {
             transition={{ delay: 0.6 }}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="#projects"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border border-white/30 text-white px-6 py-3 rounded-lg text-sm font-medium tracking-wider uppercase hover:bg-white/10 transition-colors"
           >
-            View Projects
-            <FileDown size={16} />
+            View Resume
+            <FileText size={16} />
           </motion.a>
         </motion.div>
       </div>
