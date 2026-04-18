@@ -40,9 +40,9 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-        {/* Gradient overlay from left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/25" />
+        {/* Gradient overlay from left for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
       </div>
 
       {/* Content */}
