@@ -33,7 +33,7 @@ const columns = [
       { name: "Operating System" },
       { name: "Computer Network" },
       { name: "Mobile Architecture" },
-      { name: "Backend Dev" },
+      { name: "Oops" },
     ],
   },
 ];
