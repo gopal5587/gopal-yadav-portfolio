@@ -41,11 +41,10 @@ const columns = [
 const SkillsSection = () => (
   <section
     id="skills"
-    className="py-28 relative"
-    style={{ backgroundColor: "#0d1b2a", fontFamily: "'Space Grotesk', sans-serif" }}
+    className="py-28 relative bg-background"
+    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
   >
     <div className="container mx-auto px-6 relative z-10">
-      {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +55,7 @@ const SkillsSection = () => (
           className="block mb-6"
           style={{
             fontFamily: "'Space Mono', monospace",
-            color: "#64ffda",
+            color: "#9A9A9A",
             fontSize: "11px",
             letterSpacing: "0.22em",
           }}
@@ -67,19 +66,17 @@ const SkillsSection = () => (
           className="font-bold uppercase leading-[0.95] tracking-tight"
           style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}
         >
-          <span style={{ color: "#e6f1ff" }} className="block">
+          <span style={{ color: "#0A0A0A" }} className="block">
             TECHNICAL
           </span>
-          <span style={{ color: "#1d3461" }} className="block">
+          <span style={{ color: "#9A9A9A" }} className="block">
             TOOLKIT
           </span>
         </h2>
       </motion.div>
 
-      {/* Divider */}
-      <div className="w-full h-px" style={{ backgroundColor: "#1d3461" }} />
+      <div className="w-full h-px" style={{ backgroundColor: "#E5E5E5" }} />
 
-      {/* Columns */}
       <div className="grid grid-cols-1 md:grid-cols-4">
         {columns.map((col, i) => (
           <motion.div
@@ -89,10 +86,7 @@ const SkillsSection = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
             className="md:border-r last:md:border-r-0 border-b md:border-b-0"
-            style={{
-              padding: "1.8rem",
-              borderColor: "#1d3461",
-            }}
+            style={{ padding: "1.8rem", borderColor: "#E5E5E5" }}
           >
             <h3
               className="uppercase pb-3 mb-4 border-b"
@@ -100,8 +94,8 @@ const SkillsSection = () => (
                 fontFamily: "'Space Mono', monospace",
                 fontSize: "10px",
                 letterSpacing: "0.2em",
-                color: "#64ffda",
-                borderColor: "#1d3461",
+                color: "#0A0A0A",
+                borderColor: "#E5E5E5",
               }}
             >
               {col.title}
@@ -111,16 +105,16 @@ const SkillsSection = () => (
                 <li
                   key={skill.name}
                   className="group flex flex-col py-2"
-                  style={{ borderBottom: "0.5px solid rgba(29,52,97,0.5)" }}
+                  style={{ borderBottom: "0.5px solid rgba(229,229,229,0.8)" }}
                 >
                   <div
                     className="flex items-baseline gap-2"
                     style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.83rem" }}
                   >
-                    <span style={{ color: "#64ffda" }}>—</span>
+                    <span style={{ color: "#0A0A0A" }}>—</span>
                     <span
-                      className="transition-colors duration-300 group-hover:text-[#64ffda]"
-                      style={{ color: "#a8b2d8" }}
+                      className="transition-colors duration-300 group-hover:text-black"
+                      style={{ color: "#1A1A1A" }}
                     >
                       {skill.name}
                     </span>
@@ -131,7 +125,7 @@ const SkillsSection = () => (
                       style={{
                         fontFamily: "'Space Mono', monospace",
                         fontSize: "0.7rem",
-                        color: "#4a5568",
+                        color: "#6B6B6B",
                       }}
                     >
                       {skill.note}
