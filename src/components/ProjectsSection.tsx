@@ -11,6 +11,7 @@ type Project = {
   shape1: string;
   shape2: string;
   shape3: string;
+  customMockup?: "pocketpal";
 };
 
 const projects: Project[] = [
