@@ -11,7 +11,7 @@ type Project = {
   shape1: string;
   shape2: string;
   shape3: string;
-  customMockup?: "pocketpal";
+  customMockup?: "pocketpal" | "chat" | "medgen" | "zomato";
 };
 
 const projects: Project[] = [
@@ -27,6 +27,7 @@ const projects: Project[] = [
     shape1: "bg-blue-300",
     shape2: "bg-blue-200",
     shape3: "bg-white/40",
+    customMockup: "medgen",
   },
   {
     title: "PocketPal",
@@ -54,6 +55,7 @@ const projects: Project[] = [
     shape1: "bg-orange-300",
     shape2: "bg-orange-200",
     shape3: "bg-white/40",
+    customMockup: "zomato",
   },
   {
     title: "Flutter Chat App",
@@ -67,6 +69,7 @@ const projects: Project[] = [
     shape1: "bg-purple-300",
     shape2: "bg-purple-200",
     shape3: "bg-white/40",
+    customMockup: "chat",
   },
 ];
 
@@ -128,8 +131,159 @@ const PocketPalMockup = () => (
   </div>
 );
 
+const ChatMockup = () => (
+  <div className="relative h-full w-full overflow-hidden rounded-xl shadow-lg">
+    <svg viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" className="h-full w-full block">
+      <rect width="340" height="200" fill="#0A0618" />
+      <circle cx="295" cy="35" r="58" fill="#150D2A" opacity="0.8" />
+      <circle cx="45" cy="178" r="42" fill="#150D2A" opacity="0.5" />
+      <rect x="20" y="20" width="300" height="28" rx="6" fill="#110820" />
+      <circle cx="34" cy="34" r="7" fill="#7F77DD" />
+      <text x="47" y="38" fontSize="9" fill="#AFA9EC" fontFamily="sans-serif" fontWeight="600">Flutter Chat</text>
+      <text x="158" y="38" fontSize="8" fill="#3A2A6A" fontFamily="sans-serif">Chats</text>
+      <text x="194" y="38" fontSize="8" fill="#3A2A6A" fontFamily="sans-serif">Groups</text>
+      <text x="238" y="38" fontSize="8" fill="#3A2A6A" fontFamily="sans-serif">Profile</text>
+      <rect x="20" y="58" width="110" height="120" rx="8" fill="#110820" stroke="#2A1A4A" strokeWidth="0.5" />
+      <text x="30" y="73" fontSize="7" fill="#534AB7" fontFamily="sans-serif">Recent</text>
+      <rect x="30" y="79" width="16" height="16" rx="8" fill="#534AB7" />
+      <text x="34" y="91" fontSize="7" fill="#EEEDFE" fontFamily="sans-serif">A</text>
+      <text x="52" y="88" fontSize="7" fill="#AFA9EC" fontFamily="sans-serif" fontWeight="500">Arjun</text>
+      <text x="52" y="97" fontSize="6" fill="#3A2A6A" fontFamily="sans-serif">Hey, what's up?</text>
+      <rect x="30" y="102" width="16" height="16" rx="8" fill="#7F77DD" />
+      <text x="34" y="114" fontSize="7" fill="#EEEDFE" fontFamily="sans-serif">P</text>
+      <text x="52" y="111" fontSize="7" fill="#AFA9EC" fontFamily="sans-serif" fontWeight="500">Priya</text>
+      <text x="52" y="120" fontSize="6" fill="#3A2A6A" fontFamily="sans-serif">Sent the files ✓✓</text>
+      <rect x="30" y="124" width="16" height="16" rx="8" fill="#AFA9EC" />
+      <text x="34" y="136" fontSize="7" fill="#26215C" fontFamily="sans-serif">R</text>
+      <text x="52" y="133" fontSize="7" fill="#AFA9EC" fontFamily="sans-serif" fontWeight="500">Rahul</text>
+      <text x="52" y="142" fontSize="6" fill="#3A2A6A" fontFamily="sans-serif">Meeting at 5pm</text>
+      <rect x="140" y="58" width="180" height="120" rx="8" fill="#110820" stroke="#2A1A4A" strokeWidth="0.5" />
+      <text x="210" y="73" fontSize="7" fill="#534AB7" fontFamily="sans-serif">Arjun</text>
+      <rect x="148" y="80" width="90" height="18" rx="6" fill="#1A0E30" />
+      <text x="156" y="92" fontSize="7" fill="#7F77DD" fontFamily="sans-serif">Hey, what's up? 👋</text>
+      <rect x="232" y="104" width="78" height="18" rx="6" fill="#534AB7" />
+      <text x="240" y="116" fontSize="7" fill="#EEEDFE" fontFamily="sans-serif">All good! You?</text>
+      <rect x="148" y="128" width="96" height="18" rx="6" fill="#1A0E30" />
+      <text x="156" y="140" fontSize="7" fill="#7F77DD" fontFamily="sans-serif">Check this repo out</text>
+      <rect x="148" y="162" width="172" height="14" rx="4" fill="#150D2A" stroke="#2A1A4A" strokeWidth="0.5" />
+      <text x="158" y="172" fontSize="7" fill="#3A2A6A" fontFamily="sans-serif">Type a message...</text>
+      <circle cx="309" cy="169" r="7" fill="#7F77DD" />
+      <text x="306" y="172" fontSize="8" fill="#EEEDFE" fontFamily="sans-serif">↑</text>
+      <rect x="20" y="172" width="50" height="16" rx="4" fill="#110820" stroke="#2A1A4A" strokeWidth="0.5" />
+      <text x="27" y="183" fontSize="7" fill="#3A2A6A" fontFamily="sans-serif">Flutter</text>
+      <rect x="76" y="172" width="52" height="16" rx="4" fill="#110820" stroke="#2A1A4A" strokeWidth="0.5" />
+      <text x="82" y="183" fontSize="7" fill="#3A2A6A" fontFamily="sans-serif">Firebase</text>
+      <rect x="134" y="172" width="34" height="16" rx="4" fill="#110820" stroke="#2A1A4A" strokeWidth="0.5" />
+      <text x="141" y="183" fontSize="7" fill="#3A2A6A" fontFamily="sans-serif">Dart</text>
+    </svg>
+  </div>
+);
+
+const MedGenMockup = () => (
+  <div className="relative h-full w-full overflow-hidden rounded-xl shadow-lg">
+    <svg viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" className="h-full w-full block">
+      <rect width="340" height="200" fill="#060F1E" />
+      <rect x="0" y="0" width="340" height="200" fill="#0A1628" />
+      <circle cx="280" cy="30" r="60" fill="#0C2444" opacity="0.8" />
+      <circle cx="60" cy="170" r="40" fill="#0C2444" opacity="0.6" />
+      <rect x="20" y="20" width="300" height="28" rx="6" fill="#0D1F38" />
+      <circle cx="34" cy="34" r="7" fill="#185FA5" />
+      <text x="47" y="38" fontSize="9" fill="#7EB8F5" fontFamily="sans-serif" fontWeight="600">MedGen.AI</text>
+      <text x="150" y="38" fontSize="8" fill="#3A6A9A" fontFamily="sans-serif">Symptoms</text>
+      <text x="200" y="38" fontSize="8" fill="#3A6A9A" fontFamily="sans-serif">Diagnosis</text>
+      <text x="252" y="38" fontSize="8" fill="#3A6A9A" fontFamily="sans-serif">Reports</text>
+      <rect x="20" y="58" width="185" height="12" rx="3" fill="#0D1F38" />
+      <rect x="20" y="58" width="110" height="12" rx="3" fill="#1A3A5C" />
+      <circle cx="26" cy="64" r="4" fill="#185FA5" />
+      <text x="34" y="67" fontSize="7" fill="#7EB8F5" fontFamily="sans-serif">Search symptoms or condition...</text>
+      <rect x="215" y="58" width="105" height="12" rx="3" fill="#185FA5" />
+      <text x="240" y="67" fontSize="7" fill="#B5D4F4" fontFamily="sans-serif" fontWeight="600">Analyze →</text>
+      <rect x="20" y="82" width="88" height="54" rx="8" fill="#0D1F38" stroke="#1A3A5C" strokeWidth="0.5" />
+      <text x="28" y="96" fontSize="7" fill="#4A8ABA" fontFamily="sans-serif">Confidence Score</text>
+      <text x="28" y="112" fontSize="20" fill="#7EB8F5" fontFamily="sans-serif" fontWeight="700">94%</text>
+      <text x="28" y="127" fontSize="6" fill="#2D5C8A" fontFamily="sans-serif">High confidence</text>
+      <rect x="118" y="82" width="88" height="54" rx="8" fill="#0D1F38" stroke="#1A3A5C" strokeWidth="0.5" />
+      <text x="126" y="96" fontSize="7" fill="#4A8ABA" fontFamily="sans-serif">Severity Level</text>
+      <rect x="126" y="103" width="50" height="6" rx="3" fill="#0C2444" />
+      <rect x="126" y="103" width="35" height="6" rx="3" fill="#EF9F27" />
+      <text x="126" y="127" fontSize="7" fill="#BA7517" fontFamily="sans-serif" fontWeight="600">Moderate</text>
+      <rect x="216" y="82" width="104" height="54" rx="8" fill="#0D1F38" stroke="#1A3A5C" strokeWidth="0.5" />
+      <text x="224" y="96" fontSize="7" fill="#4A8ABA" fontFamily="sans-serif">Top Diagnosis</text>
+      <text x="224" y="110" fontSize="8" fill="#9FE1CB" fontFamily="sans-serif" fontWeight="600">Viral Rhinitis</text>
+      <text x="224" y="122" fontSize="7" fill="#5DCAA5" fontFamily="sans-serif">Traceable via RAG</text>
+      <circle cx="316" cy="88" r="6" fill="#0F6E56" />
+      <text x="313" y="91" fontSize="7" fill="#9FE1CB" fontFamily="sans-serif">✓</text>
+      <rect x="20" y="148" width="300" height="1" fill="#0D2040" />
+      <text x="20" y="163" fontSize="7" fill="#1D4A7A" fontFamily="sans-serif">Sources: PubMed · WHO · Clinical Guidelines</text>
+      <rect x="20" y="170" width="60" height="16" rx="4" fill="#0D1F38" stroke="#1A3A5C" strokeWidth="0.5" />
+      <text x="29" y="181" fontSize="7" fill="#4A8ABA" fontFamily="sans-serif">Next.js</text>
+      <rect x="86" y="170" width="52" height="16" rx="4" fill="#0D1F38" stroke="#1A3A5C" strokeWidth="0.5" />
+      <text x="95" y="181" fontSize="7" fill="#4A8ABA" fontFamily="sans-serif">FastAPI</text>
+      <rect x="144" y="170" width="38" height="16" rx="4" fill="#0D1F38" stroke="#1A3A5C" strokeWidth="0.5" />
+      <text x="152" y="181" fontSize="7" fill="#4A8ABA" fontFamily="sans-serif">FAISS</text>
+      <rect x="188" y="170" width="44" height="16" rx="4" fill="#0D1F38" stroke="#1A3A5C" strokeWidth="0.5" />
+      <text x="196" y="181" fontSize="7" fill="#4A8ABA" fontFamily="sans-serif">Flutter</text>
+    </svg>
+  </div>
+);
+
+const ZomatoMockup = () => (
+  <div className="relative h-full w-full overflow-hidden rounded-xl shadow-lg">
+    <svg viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" className="h-full w-full block">
+      <rect width="340" height="200" fill="#1A0A00" />
+      <circle cx="300" cy="30" r="60" fill="#2A1200" opacity="0.8" />
+      <circle cx="40" cy="175" r="40" fill="#2A1200" opacity="0.5" />
+      <rect x="20" y="20" width="300" height="28" rx="6" fill="#1E0D00" />
+      <circle cx="34" cy="34" r="7" fill="#D85A30" />
+      <text x="47" y="38" fontSize="9" fill="#F0997B" fontFamily="sans-serif" fontWeight="600">Mini Zomato</text>
+      <text x="155" y="38" fontSize="8" fill="#6A3018" fontFamily="sans-serif">Restaurants</text>
+      <text x="214" y="38" fontSize="8" fill="#6A3018" fontFamily="sans-serif">Orders</text>
+      <text x="254" y="38" fontSize="8" fill="#6A3018" fontFamily="sans-serif">Track</text>
+      <rect x="20" y="58" width="88" height="72" rx="8" fill="#1E0D00" stroke="#3A1A08" strokeWidth="0.5" />
+      <rect x="20" y="58" width="88" height="30" rx="8" fill="#2A1400" />
+      <rect x="20" y="74" width="88" height="14" fill="#2A1400" />
+      <text x="30" y="80" fontSize="8" fill="#F0997B" fontFamily="sans-serif" fontWeight="600">Burger King</text>
+      <text x="30" y="90" fontSize="6" fill="#993C1D" fontFamily="sans-serif">Fast Food · 25 min</text>
+      <text x="30" y="104" fontSize="7" fill="#D85A30" fontFamily="sans-serif">★ 4.2</text>
+      <text x="65" y="104" fontSize="7" fill="#6A3018" fontFamily="sans-serif">₹200 min</text>
+      <rect x="30" y="110" width="58" height="12" rx="4" fill="#D85A30" />
+      <text x="44" y="119" fontSize="7" fill="#FAECE7" fontFamily="sans-serif">Order Now</text>
+      <rect x="118" y="58" width="88" height="72" rx="8" fill="#1E0D00" stroke="#3A1A08" strokeWidth="0.5" />
+      <rect x="118" y="58" width="88" height="30" rx="8" fill="#261000" />
+      <rect x="118" y="74" width="88" height="14" fill="#261000" />
+      <text x="128" y="80" fontSize="8" fill="#F0997B" fontFamily="sans-serif" fontWeight="600">Pizza Hut</text>
+      <text x="128" y="90" fontSize="6" fill="#993C1D" fontFamily="sans-serif">Pizza · 35 min</text>
+      <text x="128" y="104" fontSize="7" fill="#D85A30" fontFamily="sans-serif">★ 4.5</text>
+      <text x="163" y="104" fontSize="7" fill="#6A3018" fontFamily="sans-serif">₹300 min</text>
+      <rect x="128" y="110" width="58" height="12" rx="4" fill="#993C1D" />
+      <text x="142" y="119" fontSize="7" fill="#FAECE7" fontFamily="sans-serif">Order Now</text>
+      <rect x="216" y="58" width="104" height="72" rx="8" fill="#1E0D00" stroke="#3A1A08" strokeWidth="0.5" />
+      <text x="226" y="73" fontSize="7" fill="#6A3018" fontFamily="sans-serif">Your Cart</text>
+      <text x="226" y="87" fontSize="8" fill="#F0997B" fontFamily="sans-serif">Whopper x1</text>
+      <text x="285" y="87" fontSize="8" fill="#D85A30" fontFamily="sans-serif">₹199</text>
+      <rect x="226" y="92" width="84" height="0.5" fill="#3A1A08" />
+      <text x="226" y="104" fontSize="8" fill="#F0997B" fontFamily="sans-serif">Fries x2</text>
+      <text x="285" y="104" fontSize="8" fill="#D85A30" fontFamily="sans-serif">₹120</text>
+      <rect x="226" y="109" width="84" height="0.5" fill="#3A1A08" />
+      <text x="226" y="120" fontSize="7" fill="#993C1D" fontFamily="sans-serif" fontWeight="600">Total: ₹319</text>
+      <rect x="226" y="122" width="84" height="1" fill="#D85A30" opacity="0.3" />
+      <rect x="20" y="142" width="300" height="1" fill="#2A1200" />
+      <text x="20" y="156" fontSize="7" fill="#3A1A08" fontFamily="sans-serif">3 apps: Customer · Restaurant · Delivery Agent</text>
+      <rect x="20" y="164" width="50" height="16" rx="4" fill="#1E0D00" stroke="#3A1A08" strokeWidth="0.5" />
+      <text x="29" y="175" fontSize="7" fill="#6A3018" fontFamily="sans-serif">Flutter</text>
+      <rect x="76" y="164" width="38" height="16" rx="4" fill="#1E0D00" stroke="#3A1A08" strokeWidth="0.5" />
+      <text x="83" y="175" fontSize="7" fill="#6A3018" fontFamily="sans-serif">BLoC</text>
+      <rect x="120" y="164" width="100" height="16" rx="4" fill="#1E0D00" stroke="#3A1A08" strokeWidth="0.5" />
+      <text x="128" y="175" fontSize="7" fill="#6A3018" fontFamily="sans-serif">Clean Architecture</text>
+    </svg>
+  </div>
+);
+
 const MockupPreview = ({ project }: { project: Project }) => {
   if (project.customMockup === "pocketpal") return <PocketPalMockup />;
+  if (project.customMockup === "chat") return <ChatMockup />;
+  if (project.customMockup === "medgen") return <MedGenMockup />;
+  if (project.customMockup === "zomato") return <ZomatoMockup />;
   return (
   <div className="relative bg-white rounded-xl overflow-hidden shadow-lg h-full flex flex-col">
     {/* Browser nav bar */}
