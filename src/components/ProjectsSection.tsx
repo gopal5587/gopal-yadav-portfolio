@@ -84,7 +84,53 @@ const Dots = () => (
   </svg>
 );
 
-const MockupPreview = ({ project }: { project: Project }) => (
+const PocketPalMockup = () => (
+  <div className="relative h-full w-full overflow-hidden rounded-xl shadow-lg">
+    <svg viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" className="h-full w-full block">
+      <rect width="340" height="200" fill="#071A10" />
+      <circle cx="290" cy="40" r="55" fill="#0A2A14" opacity="0.8" />
+      <circle cx="50" cy="180" r="45" fill="#0A2A14" opacity="0.5" />
+      <rect x="20" y="20" width="300" height="28" rx="6" fill="#0A2014" />
+      <circle cx="34" cy="34" r="7" fill="#1D9E75" />
+      <text x="47" y="38" fontSize="9" fill="#5DCAA5" fontFamily="sans-serif" fontWeight="600">PocketPal</text>
+      <text x="150" y="38" fontSize="8" fill="#2A6A40" fontFamily="sans-serif">Overview</text>
+      <text x="196" y="38" fontSize="8" fill="#2A6A40" fontFamily="sans-serif">Budget</text>
+      <text x="236" y="38" fontSize="8" fill="#2A6A40" fontFamily="sans-serif">Analytics</text>
+      <rect x="20" y="58" width="140" height="80" rx="8" fill="#0A2014" stroke="#1A4A28" strokeWidth="0.5" />
+      <text x="30" y="73" fontSize="7" fill="#3A8A58" fontFamily="sans-serif">Total Balance</text>
+      <text x="30" y="92" fontSize="18" fill="#5DCAA5" fontFamily="sans-serif" fontWeight="700">₹42,850</text>
+      <text x="30" y="104" fontSize="6" fill="#1D9E75" fontFamily="sans-serif">↑ +8.2% this month</text>
+      <rect x="30" y="112" width="40" height="14" rx="4" fill="#1D9E75" />
+      <text x="38" y="122" fontSize="7" fill="#E1F5EE" fontFamily="sans-serif">Add</text>
+      <rect x="76" y="112" width="52" height="14" rx="4" fill="#0A2A18" stroke="#1D9E75" strokeWidth="0.5" />
+      <text x="83" y="122" fontSize="7" fill="#5DCAA5" fontFamily="sans-serif">History</text>
+      <rect x="170" y="58" width="150" height="80" rx="8" fill="#0A2014" stroke="#1A4A28" strokeWidth="0.5" />
+      <text x="180" y="73" fontSize="7" fill="#3A8A58" fontFamily="sans-serif">Spending by Category</text>
+      <circle cx="245" cy="105" r="22" fill="none" stroke="#1D9E75" strokeWidth="8" strokeDasharray="45 97" />
+      <circle cx="245" cy="105" r="22" fill="none" stroke="#EF9F27" strokeWidth="8" strokeDasharray="30 97" strokeDashoffset="-45" />
+      <circle cx="245" cy="105" r="22" fill="none" stroke="#378ADD" strokeWidth="8" strokeDasharray="22 97" strokeDashoffset="-75" />
+      <circle cx="245" cy="105" r="10" fill="#0A2014" />
+      <rect x="172" y="72" width="6" height="6" rx="1" fill="#1D9E75" />
+      <text x="181" y="78" fontSize="6" fill="#3A8A58" fontFamily="sans-serif">Food 42%</text>
+      <rect x="172" y="82" width="6" height="6" rx="1" fill="#EF9F27" />
+      <text x="181" y="88" fontSize="6" fill="#3A8A58" fontFamily="sans-serif">Travel 28%</text>
+      <rect x="172" y="92" width="6" height="6" rx="1" fill="#378ADD" />
+      <text x="181" y="98" fontSize="6" fill="#3A8A58" fontFamily="sans-serif">Bills 20%</text>
+      <rect x="20" y="150" width="300" height="1" fill="#0A2A14" />
+      <text x="20" y="164" fontSize="7" fill="#1A4A28" fontFamily="sans-serif">Recent: Swiggy -₹240 · Petrol -₹800 · Netflix -₹199</text>
+      <rect x="20" y="172" width="50" height="16" rx="4" fill="#0A2014" stroke="#1A4A28" strokeWidth="0.5" />
+      <text x="29" y="183" fontSize="7" fill="#3A8A58" fontFamily="sans-serif">Flutter</text>
+      <rect x="76" y="172" width="38" height="16" rx="4" fill="#0A2014" stroke="#1A4A28" strokeWidth="0.5" />
+      <text x="83" y="183" fontSize="7" fill="#3A8A58" fontFamily="sans-serif">BLoC</text>
+      <rect x="120" y="172" width="52" height="16" rx="4" fill="#0A2014" stroke="#1A4A28" strokeWidth="0.5" />
+      <text x="128" y="183" fontSize="7" fill="#3A8A58" fontFamily="sans-serif">Firebase</text>
+    </svg>
+  </div>
+);
+
+const MockupPreview = ({ project }: { project: Project }) => {
+  if (project.customMockup === "pocketpal") return <PocketPalMockup />;
+  return (
   <div className="relative bg-white rounded-xl overflow-hidden shadow-lg h-full flex flex-col">
     {/* Browser nav bar */}
     <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-200 bg-gray-50">
@@ -126,7 +172,8 @@ const MockupPreview = ({ project }: { project: Project }) => (
       </div>
     </div>
   </div>
-);
+  );
+};
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const Icon = project.icon;
