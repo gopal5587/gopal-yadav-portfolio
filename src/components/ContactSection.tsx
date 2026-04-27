@@ -140,7 +140,7 @@ const ContactSection = () => {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full gradient-bg text-primary-foreground py-3.5 rounded-xl font-medium flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+              className="w-full bg-black text-white py-3.5 rounded-full font-medium flex items-center justify-center gap-2 shadow-sm hover:bg-black/85 transition-colors"
             >
               Send Message <Send size={16} />
             </motion.button>
