@@ -40,6 +40,7 @@ const projects: Project[] = [
     shape1: "bg-emerald-300",
     shape2: "bg-emerald-200",
     shape3: "bg-white/40",
+    customMockup: "pocketpal",
   },
   {
     title: "Mini Zomato",
